@@ -1,0 +1,118 @@
+body {
+  font-family: "Cabin", sans-serif;
+  border: 2px blueviolet solid;
+}
+/* HEADER - UTILITY NAV TOP RIGHT */
+.utility-header {
+  align-items: center;
+  display: flex;
+  height: 40px;
+  justify-content: flex-end;
+  /*border: 2px black solid;*/
+}
+
+.utility-nav {
+  width: 350px;
+  /*border: 2px black solid;*/
+}
+
+.utility-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 8px;
+}
+
+.utility-nav-element {
+  cursor: pointer;
+  padding: 5px 30px;
+}
+
+.utility-nav-element:last-child {
+  padding-left: 0;
+}
+
+/*MAIN INTRO*/
+.main-intro-container {
+  align-items: center;
+  background-color: rgb(182, 204, 202);
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  padding: 25px;
+  text-align: center;
+}
+
+.main-intro-title {
+  font-size: 48px;
+  margin-top: 50px;
+}
+
+.main-intro-content {
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  height: 100px;
+  margin: 25px;
+  text-align: center;
+}
+
+.main-intro-nav {
+  align-items: center;
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  height: 75px;
+  /*border: 2px black solid;*/
+}
+
+.main-intro-nav-element {
+  background-color: #008080;
+  border-bottom: 2px solid #444444;
+  border-radius: 3px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 10px;
+  text-align: center;
+  line-height: 2em;
+  transition: 0.4s ease-in-out;
+  width: 150px;
+}
+
+.main-intro-nav-element:hover {
+  background-color: #a0c4c4;
+}
+
+.main-intro-nav-element-text {
+  padding: 20px;
+}
+
+/*PORTFOLIO SECTION - 3X3 COLUMN GRID*/
+
+.portfolio-container {
+  border: solid 3px yellowgreen;
+  margin: 25px;
+}
+
+.portfolio-title {
+  color: black;
+  margin-top: 25px;
+  border: solid 3px green;
+}
+
+.heading {
+  font-family: "Oswald", sans-serif;
+  font-size: 36px;
+  text-align: center;
+}
+
+.grid-portfolio-layout {
+  padding: 35px 70px 200px 125px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 25px 25px;
+  justify-content: center;
+  align-content: center;
+}
