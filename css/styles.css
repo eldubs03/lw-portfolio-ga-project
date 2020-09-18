@@ -116,3 +116,8 @@ body {
   justify-content: center;
   align-content: center;
 }
+
+img {
+  width: 259px;
+  height: 194px;
+}
