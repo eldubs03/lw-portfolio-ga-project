@@ -14,13 +14,98 @@
     />
   </head>
   <body>
-    <header class="utility-header">
+    <!--<header class="utility-header">
       <nav class="utility-nav">
         <h2 class="utility-nav-element">Twitter</h2>
         <h2 class="utility-nav-element">Instagram</h2>
         <h2 class="utility-nav-element">Contact</h2>
       </nav>
+    </header>-->
+
+    <!-- Top nav -->
+    <header class="global-header" id="top-nav">
+      <section class="nav-left">
+        <div class="logo">
+          <h1>Lauren Wilson</h1>
+        </div>
+        <ul class="nav">
+          <li id="menu-1-button">Why Slack?</li>
+          <li id="menu-2-button">Solutions</li>
+          <li id="menu-3-button">Resources</li>
+          <li>Pricing</li>
+        </ul>
+      </section>
+      <div class="nav-right">
+        <p class="workspaces">Your Workspaces</p>
+        <div class="hamburger-menu" id="menu-trigger">
+          <img
+            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/hamburger.svg"
+            alt="Hamburger icon"
+          />
+        </div>
+      </div>
     </header>
+
+    <!--Main content-->
+    <section class="placeholder"></section>
+
+    <!--Side menu-->
+    <aside class="side-menu-position side-menu-design" id="side-menu">
+      <header class="side-menu-header">
+        <img
+          src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/slack.svg"
+          alt="Slack logo"
+        />
+        <img
+          src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/x.svg"
+          alt="Close this menu"
+          id="menu-close"
+        />
+      </header>
+      <ul class="side-menu-content">
+        <li>Why Slack?</li>
+        <li>Pricing</li>
+        <li>About Us</li>
+        <li class="side-menu-workspace">Your Workspaces</li>
+        <li class="side-menu-download">Download Slack</li>
+      </ul>
+    </aside>
+
+    <!--Dropdown Menus, notice how they are asides listed just inside the body - no deeper -->
+    <aside class="dropdown-menu" id="menu-1">
+      <h2 class="menu-header">About the Product</h2>
+      <ul class="menu-item-list">
+        <li><a href="#">How it works</a></li>
+        <li><a href="#">Security</a></li>
+        <li><a href="#">Customers</a></li>
+        <li><a href="#">Enterprise</a></li>
+      </ul>
+    </aside>
+
+    <aside class="dropdown-menu" id="menu-2">
+      <h2 class="menu-header">Slack for Every Team</h2>
+      <ul class="menu-item-list">
+        <li><a href="#">Engineering</a></li>
+        <li><a href="#">IT</a></li>
+        <li><a href="#">Customer Support</a></li>
+        <li><a href="#">Project Management</a></li>
+        <li><a href="#">Sales</a></li>
+        <li><a href="#">Marketing</a></li>
+        <li><a href="#">Human Resources</a></li>
+      </ul>
+    </aside>
+
+    <aside class="dropdown-menu" id="menu-3">
+      <h2 class="menu-header">Go Further With Slack</h2>
+      <ul class="menu-item-list">
+        <li><a href="#">Download</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Help Center</a></li>
+        <li><a href="#">e-Books</a></li>
+        <li><a href="#">Reports</a></li>
+        <li><a href="#">API</a></li>
+      </ul>
+    </aside>
 
     <section class="main-intro-container">
       <p class="img-holder">logo</p>
@@ -50,7 +135,7 @@
       </header>
       <main class="grid-portfolio-layout">
         <div>
-          <img src="img/image-placeholder.png" />
+          <img src="img/image-placeholder.png" class="placeholder-image" />
         </div>
         <div>
           <img src="img/image-placeholder.png" />
