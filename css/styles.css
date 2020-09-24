@@ -148,3 +148,44 @@ ul {
   width: 600px;
   height: 400px;
 }
+
+/*PORTFOLIO HOME PAGE TRANSITION EFFECTS*/
+
+.container {
+  width: 600px;
+  position: relative; /*Need this so text knows where to go...take out and text overlay jumps up to top of page*/
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+}
+
+.parent {
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container:hover .image {
+  opacity: 0.5;
+}
+
+.container:hover .parent {
+  opacity: 1;
+}
+
+.text {
+  color: black;
+  font-size: 42px;
+  padding: 16px 32px;
+}
