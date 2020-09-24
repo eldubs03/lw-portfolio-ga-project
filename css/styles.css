@@ -1,9 +1,11 @@
 body {
-  font-family: "Cabin", sans-serif;
-  border: 2px blueviolet solid;
+  font-family: Lato;
+  border: 2px solid purple;
 }
 
-.global-header {
+/*Top Nav Section*/
+
+.header {
   background-color: white;
   display: flex;
   flex-direction: row;
@@ -11,8 +13,8 @@ body {
   height: 40px;
   padding: 15px 25px;
   width: calc(100% - 50px);
+  border: 2px solid greenyellow;
 }
-
 
 .nav-left {
   align-items: center;
@@ -55,389 +57,38 @@ ul {
   margin-right: 45px;
 }
 
-/* DROPDOWN MENU */
-.dropdown-menu {
-  background-color: white;
-  box-shadow: 0 0 2rem rgba(0,0,0,.1); /* creates a border */
-  display: none;
-  padding: 15px;
-  position: absolute; /* pops element up in the dom */
-  top: 60px; /* just visually aligned this */
-  width: 250px;
-  z-index: 10; /* how much popping up does it go? I use multiples of 10 */
-}
+/*Bio Intro Section*/
 
-/* When there is no space between the selectors, it means both selectors have to be on the one element */
-/* We are doing this so we can reuse the .dropdown-menu properties on all menus but position them differently */
-.dropdown-menu#menu-1 {
-  left: 190px;
-}
-
-.dropdown-menu#menu-2 {
-  left: 290px;
-  min-width: 400px; /* to stretch the menu to match slack */
-}
-
-.dropdown-menu#menu-3 {
-  left: 390px;
-  min-width: 400px; /* to stretch the menu to match slack */
-}
-
-.menu-header {
-  font-size: 12px;
-  margin: 0;
-  padding: 0 10px 8px 10px; /* eyeballin' it - you know */
-  text-transform: uppercase;
-}
-
-.menu-item-list {
-  margin: 0;
-  padding-left: 0;
-}
-
-/**
- * You may notice on the Slack site that there are 2 columns in the 2nd and 3rd menus dropdowns
- * This is accomplished with an infrequently used css property: column-count
- * It makes a single list flow into two columns, works similar to CSS grid but has the advantage of simple HTML just a big <ul> is needed 
- * Also, notice the selectors here - I'm using the unique ID of the second and third menu but including the class on the <ul> - why?
- * This way we can target each individual list with out adding in another class
- */
-#menu-2 .menu-item-list, 
-#menu-3 .menu-item-list {
-  column-count: 2;
-  column-gap: 20px;
-}
-
-
-.menu-item-list li a,
-.menu-item-list li a:visited,
-.menu-item-list li a:focus {
-  color: #454545;
-  display: block;
-  padding: 10px; /* just a little padding on the top and bottom */
-  text-decoration: none;
-}
-
-.menu-item-list li a:hover {
-  background-color: rgb(242,242,242);
-  color: #1264a3;
-}
-
-/* Fade-in header */
-#fade-in-header {
-  display: none;
-  position: fixed;
-  top: 0;
-}
-
-#top-nav {
-  position: fixed;
-}
-
-.show {
-  display: block;
-}
-
-
-/* SIDE MENU */
-.workspaces {
-  background-color: #611f69;
-  border-radius: 10px;
-  color: white;
-  cursor: pointer;
-  display: none; /* and like that...it's gone */
-  padding: 8px 16px;
-  transition: all 420ms ease-in-out; /* what's this? explore a bit... */
-}
-
-/* Notice you can do a hover state on an element, not just <a> links */
-.workspaces:hover {
-  background-color: #4a154b
-}
-
-@media (min-width: 1085px) {
-  .workspaces {
-    display: block; /* and it's back, the power of display none! */
-  }  
-}
-
-.hamburger-menu {
-  display: block; /* display:none starts to show up with responsive */
-  cursor: pointer;
-}
-
-/* why this breakpoint? ask the slack people - they choose it (it's not great tbh) */
-@media (min-width: 1085px) {
-  .hamburger-menu {
-    display: none;
-  }
-}
-
-/**
- * =============
- * OFF-CANVAS MENU
- * =============
- *
- * Lot going on here, let's break it down
- * Slack has an image with a translucent bg which combines bg color and image together
- * position: fixed with 0,0,0,0 positions streches across the viewport
- * z-index: 2 keeps it on top of the rest of the page
- * I'm breaking the side-menu parent into two styles, one position and on design, so you can see how this looks better
- * You don't have to do it this way at all...but it helps to see the separation of concerns here
- */
-.side-menu-position {
-  padding-top: 25px;
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 2;
-}
-
-.side-menu-design {
-  background-color: #611f69;
-  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/sidebar-background.png');
-  background-size: 1300px 700px;
-  background-repeat: repeat;
-  cursor: pointer;
-  opacity: 0;
-  transform: translateX(100%);
-  transition: 0.4s ease-in-out;
-}
-
-/* on top we need spacing from the border, so we have to use padding */
-/* but we also want that bottom margin to bleed to the edge, so no margins here */
-.side-menu-header {
-  border-bottom: 1px solid rgba(255,255,255,.1); /* based on slack look, very faint */
+.bio-intro-container {
   display: flex;
-  justify-content: space-between;
-  padding: 0 25px 25px 25px;  
-}
-
-/* Main content is pretty easy for layouts, pattern you'll see in web dev */
-/* The more text an element has, the easier it is to layout - BAM wisdom bomb! */
-.side-menu-content {
-  color: #fff;
-  font-size: 24px; /* could use ems here I guess but eh... */
-  margin: 25px;
-  padding-left: 0; /* zeroing it out */
-}
-
-.side-menu-content li {
-  list-style: none;
-  margin-bottom: 25px;
-}
-
-.side-menu-workspace {
-  margin-bottom: 8px;
-  text-align: center;
-}
-
-.side-menu-download {
-  background-color: #fff;
-  color: #611f69;
-  padding: 15px 0;
-  text-align: center;
-  width: 100%;
-}
-
-/* Sticks the nav to the top of the page */
-#top-nav {
-  position: fixed;
-}
-
-
-/**
- * Animation classes
- */
-.show-menu {
-  opacity: 1;
-  transform: translateX(0%);
-}
-
-
-
-
-
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
-/*
- * Hide visually and from screen readers
- */
-
-.hidden {
-    display: none !important;
-}
-
-/*
- * Hide only visually, but have it available for screen readers:
- * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
- *
- * 1. For long content, line feeds are not interpreted as spaces and small width
- *    causes content to wrap 1 word per line:
- *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
- */
-
-.visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    -webkit-clip-path: inset(50%);
-    clip-path: inset(50%);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-    white-space: nowrap; /* 1 */
-}
-
-/*
- * Extends the .visuallyhidden class to allow the element
- * to be focusable when navigated to via the keyboard:
- * https://www.drupal.org/node/897638
- */
-
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-    clip: auto;
-    -webkit-clip-path: none;
-    clip-path: none;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
-    white-space: inherit;
-}
-
-/*
- * Hide visually and from screen readers, but maintain layout
- */
-
-.invisible {
-    visibility: hidden;
-}
-
-/* HEADER - UTILITY NAV TOP RIGHT */
-/*.utility-header {
-  align-items: center;
-  display: flex;
-  height: 40px;
-  justify-content: flex-end;
-  /*border: 2px black solid;*/
-}
-
-/*.utility-nav {
-  width: 350px;
-  /*border: 2px black solid;*/
-}
-
-/*.utility-nav {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  font-size: 8px;
-}
-
-.utility-nav-element {
-  cursor: pointer;
-  padding: 5px 30px;
-}
-
-.utility-nav-element:last-child {
-  padding-left: 0;
-}
-
-/*MAIN INTRO*/
-.main-intro-container {
-  align-items: center;
-  background-color: rgb(182, 204, 202);
-  display: grid;
-  grid-template-columns: 1fr;
+  flex-direction: row;
   justify-content: center;
-  padding: 25px;
-  text-align: center;
+  padding: 50px 15px 50px 15px;
+  border: 3px solid lightblue;
 }
 
-.main-intro-title {
+.bio-intro-text p {
   font-size: 48px;
-  margin-top: 50px;
 }
 
-.main-intro-content {
-  font-size: 20px;
-  display: flex;
-  justify-content: center;
-  height: 100px;
-  margin: 25px;
-  text-align: center;
-}
-
-.main-intro-nav {
-  align-items: center;
-  display: flex;
-  height: 40px;
-  justify-content: center;
-  height: 75px;
-  /*border: 2px black solid;*/
-}
-
-.main-intro-nav-element {
-  background-color: #008080;
-  border-bottom: 2px solid #444444;
-  border-radius: 3px;
-  color: white;
-  cursor: pointer;
-  font-size: 16px;
-  margin: 10px;
-  text-align: center;
-  line-height: 2em;
-  transition: 0.4s ease-in-out;
-  width: 150px;
-}
-
-.main-intro-nav-element:hover {
-  background-color: #a0c4c4;
-}
-
-.main-intro-nav-element-text {
-  padding: 20px;
-}
-
-/*PORTFOLIO SECTION - 3X3 COLUMN GRID*/
+/* Portfolio Grid Section*/
 
 .portfolio-container {
   border: solid 3px yellowgreen;
-  margin: 25px;
-}
-
-.portfolio-title {
-  color: black;
-  margin-top: 25px;
-  border: solid 3px green;
-}
-
-.heading {
-  font-family: "Oswald", sans-serif;
-  font-size: 36px;
-  text-align: center;
+  margin: 30px;
 }
 
 .grid-portfolio-layout {
   padding: 35px 70px 200px 125px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-gap: 25px 25px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 10px 10px;
   justify-content: center;
   align-content: center;
 }
 
 .placeholder-image {
-  width: 259px;
-  height: 194px;
+  width: 600px;
+  height: 400px;
 }
