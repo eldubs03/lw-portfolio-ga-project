@@ -3,7 +3,7 @@ body {
   border: 2px solid purple;
 }
 
-/*Top Nav Section*/
+/*TOP NAV SECTION*/
 
 .header {
   background-color: white;
@@ -57,21 +57,77 @@ ul {
   margin-right: 45px;
 }
 
-/*Bio Intro Section*/
+/* DROPDOWN MENU */
+.nav {
+  overflow: hidden;
+}
+
+.dropdown {
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 45px;
+}
+
+.dropdown .dropbtn {
+  cursor: pointer;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: black;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+  border: 1px solid pink;
+}
+
+.nav a:hover,
+.dropdown:hover .dropbtn,
+.dropbtn:focus {
+  background-color: pink;
+}
+
+.dropdown-content {
+  background-color: white;
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
+  display: none;
+  padding: 15px;
+  position: absolute;
+  top: 60px;
+  width: 250px;
+  z-index: 10;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.show {
+  display: block;
+}
+
+/*BIO INTRO SECTION*/
 
 .bio-intro-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding: 50px 15px 50px 15px;
-  border: 3px solid lightblue;
+  padding: 50px 25px 50px 25px;
+  /border: 3px solid lightblue;
 }
 
-.bio-intro-text p {
-  font-size: 48px;
+.bio-intro-text {
+  font-size: 64px;
+  text-align: center;
 }
 
-/* Portfolio Grid Section*/
+/* PORTFOLIO GRID SECTION*/
 
 .portfolio-container {
   border: solid 3px yellowgreen;

@@ -4,6 +4,22 @@ const name = "Marc";
 
 console.log(name);
 
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function (e) {
+  if (!e.target.matches(".dropbtn")) {
+    var myDropdown = document.getElementById("myDropdown");
+    if (myDropdown.classList.contains("show")) {
+      myDropdown.classList.remove("show");
+    }
+  }
+};
+
+//from codepen Slack example//
+
 // Think about application structure a bit, very similar to traffic light exercise
 // Look at how we're taking functions and calling them from event handlers - common pattern in JS
 function menuOneAppear() {
