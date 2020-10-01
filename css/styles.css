@@ -34,7 +34,7 @@ body {
   padding-left: 0;
 }
 
-@media (min-width: 1085px) {
+@media (min-width: 600px) {
   .nav {
     display: flex;
   }
@@ -118,8 +118,8 @@ ul {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding: 50px 25px 50px 25px;
-  /border: 3px solid lightblue;
+  padding: 50px 15px 50px 15px;
+  border: 3px solid lightblue;
 }
 
 .bio-intro-text {
@@ -129,13 +129,13 @@ ul {
 
 /* PORTFOLIO GRID SECTION*/
 
-.portfolio-container {
+.portfolio-main-container {
   border: solid 3px yellowgreen;
   margin: 30px;
 }
 
 .grid-portfolio-layout {
-  padding: 35px 70px 200px 125px;
+  padding: 35px 50px 200px 50px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
@@ -144,16 +144,18 @@ ul {
   align-content: center;
 }
 
-.placeholder-image {
-  width: 600px;
-  height: 400px;
+@media (max-width: 600px) {
+  .grid-portfolio-layout {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 /*PORTFOLIO HOME PAGE TRANSITION EFFECTS*/
 
-.container {
-  width: 600px;
-  position: relative; /*Need this so text knows where to go...take out and text overlay jumps up to top of page*/
+.art-container-2-items {
+  position: relative;
+  border: 2px solid black;
 }
 
 .image {
@@ -176,16 +178,18 @@ ul {
   text-align: center;
 }
 
-.container:hover .image {
+.art-container-2-items:hover .image {
   opacity: 0.5;
 }
 
-.container:hover .parent {
+.art-container-2-items:hover .parent {
   opacity: 1;
 }
 
 .text {
   color: black;
-  font-size: 42px;
+  font-size: 30px;
   padding: 16px 32px;
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
 }
