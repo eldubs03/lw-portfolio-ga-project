@@ -1,9 +1,12 @@
 body {
   font-family: Lato;
-  border: 2px solid purple;
+  /*   border: 2px solid purple; */
 }
 
-/*TOP NAV SECTION*/
+/*  ===============
+*   TOP NAV SECTION
+*   =============== 
+*/
 
 .header {
   background-color: white;
@@ -11,7 +14,7 @@ body {
   flex-direction: row;
   justify-content: space-between;
   height: 40px;
-  padding: 15px 25px;
+  padding: 15px 15px;
   width: calc(100% - 50px);
   border: 2px solid greenyellow;
 }
@@ -34,7 +37,7 @@ body {
   padding-left: 0;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 800px) {
   .nav {
     display: flex;
   }
@@ -57,16 +60,16 @@ ul {
   margin-right: 45px;
 }
 
-/* DROPDOWN MENU */
-.nav {
-  overflow: hidden;
-}
+/*  =============
+*   DROPDOWN MENU
+*   =============
+*/
 
 .dropdown {
-  align-items: center;
+  align-items: left;
   display: flex;
   justify-content: flex-end;
-  margin-right: 45px;
+  margin-right: 25px;
 }
 
 .dropdown .dropbtn {
@@ -79,20 +82,21 @@ ul {
   background-color: inherit;
   font-family: inherit;
   margin: 0;
-  border: 1px solid pink;
+  /*   border: 1px solid pink; */
 }
 
 .nav a:hover,
 .dropdown:hover .dropbtn,
 .dropbtn:focus {
-  background-color: pink;
+  background-color: lightblue;
+  color: white;
 }
 
 .dropdown-content {
   background-color: white;
   box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
   display: none;
-  padding: 15px;
+  padding: 5px;
   position: absolute;
   top: 60px;
   width: 250px;
@@ -108,11 +112,106 @@ ul {
   text-align: left;
 }
 
+.menu-item-list li a,
+.menu-item-list li a:visited,
+.menu-item-list li a:focus {
+  color: #454545;
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.menu-item-list li a:hover {
+  background-color: rgb(242, 242, 242);
+  color: #1264a3;
+}
+
+#top-nav {
+  position: fixed;
+}
+
 .show {
   display: block;
 }
 
-/*BIO INTRO SECTION*/
+/*  ===========
+*    HAMBURGER
+*   ===========
+*/
+
+.hamburger-menu {
+  display: none; /* display:none starts to show up with responsive */
+  cursor: pointer;
+}
+@media (max-width: 800px) {
+  .hamburger-menu {
+    display: block;
+  }
+}
+
+/*
+ * ====================
+ * OFF-CANVAS SIDE MENU
+ * ====================
+*/
+
+.side-menu-position {
+  padding-top: 25px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.side-menu-design {
+  background-color: #611f69;
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/sidebar-background.png");
+  background-size: 1300px 700px;
+  background-repeat: repeat;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: 0.4s ease-in-out;
+}
+
+.side-menu-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: space-between;
+  padding: 0 25px 25px 25px;
+}
+
+.side-menu-content {
+  color: #fff;
+  font-size: 24px;
+  margin: 25px;
+  padding-left: 0;
+}
+
+.side-menu-content li {
+  list-style: none;
+  margin-bottom: 25px;
+}
+
+.side-menu-workspace {
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.side-menu-download {
+  background-color: #fff;
+  color: #611f69;
+  padding: 15px 0;
+  text-align: center;
+  width: 100%;
+}
+
+/** =================
+*   BIO INTRO SECTION
+*   =================
+*/
 
 .bio-intro-container {
   display: flex;
@@ -127,7 +226,10 @@ ul {
   text-align: center;
 }
 
-/* PORTFOLIO GRID SECTION*/
+/** ======================
+*   PORTFOLIO GRID SECTION
+*   ======================
+*/
 
 .portfolio-main-container {
   border: solid 3px yellowgreen;
@@ -144,18 +246,22 @@ ul {
   align-content: center;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
   .grid-portfolio-layout {
     display: flex;
     flex-direction: column;
   }
 }
 
-/*PORTFOLIO HOME PAGE TRANSITION EFFECTS*/
+/** ======================================
+*   PORTFOLIO HOME PAGE TRANSITION EFFECTS
+*   ======================================
+*/
 
 .art-container-2-items {
   position: relative;
   border: 2px solid black;
+  z-index: -1;
 }
 
 .image {
@@ -188,8 +294,16 @@ ul {
 
 .text {
   color: black;
-  font-size: 30px;
+  font-size: 36px;
   padding: 16px 32px;
   font-family: "Lato", sans-serif;
   font-weight: 900;
+}
+
+/**
+ * Animation classes
+ */
+.show-menu {
+  opacity: 1;
+  transform: translateX(0%);
 }
