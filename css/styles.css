@@ -128,6 +128,7 @@ ul {
 
 #top-nav {
   position: fixed;
+  z-index: 10;
 }
 
 .show {
@@ -217,7 +218,7 @@ ul {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding: 50px 15px 50px 15px;
+  padding: 150px 25px 50px 25px;
   border: 3px solid lightblue;
 }
 
@@ -261,7 +262,6 @@ ul {
 .art-container-2-items {
   position: relative;
   border: 2px solid black;
-  z-index: -1;
 }
 
 .image {
