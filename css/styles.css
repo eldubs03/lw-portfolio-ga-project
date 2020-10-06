@@ -163,7 +163,7 @@ ul {
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 2;
+  z-index: 11;
 }
 
 .side-menu-design {
@@ -218,7 +218,7 @@ ul {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding: 150px 25px 50px 25px;
+  padding: 75px 25px 50px 25px;
   border: 3px solid lightblue;
 }
 
