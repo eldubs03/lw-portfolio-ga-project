@@ -35,6 +35,20 @@ body {
   align-items: center;
 }
 
+.logo-name a,
+.logo-name a:visited,
+.logo-name a:focus {
+  color: #454545;
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.logo-name a:hover {
+  /* background-color: rgb(242, 242, 242); */
+  color: #1264a3;
+}
+
 .nav {
   display: none;
   flex-direction: row;
@@ -170,7 +184,7 @@ ul {
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 11;
+  z-index: 40;
 }
 
 .side-menu-design {
