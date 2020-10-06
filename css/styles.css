@@ -1,7 +1,13 @@
 body {
   font-family: Lato;
   /*   border: 2px solid purple; */
+  color: #34363e;
 }
+/* .normal-gradient {
+  background-image: linear-gradient(white, lightblue);
+  height: 100%vh;
+  margin: 10px;
+} */
 
 /*  ===============
 *   TOP NAV SECTION
@@ -48,8 +54,9 @@ ul {
 }
 
 .nav li {
-  font-size: 14px;
+  font-size: 16px;
   margin: 0 20px;
+  color: #34363e;
   cursor: pointer;
 }
 
@@ -77,7 +84,7 @@ ul {
   font-size: 16px;
   border: none;
   outline: none;
-  color: black;
+  color: #34363e;
   padding: 14px 16px;
   background-color: inherit;
   font-family: inherit;
@@ -88,8 +95,8 @@ ul {
 .nav a:hover,
 .dropdown:hover .dropbtn,
 .dropbtn:focus {
-  background-color: lightblue;
-  color: white;
+  background-color: rgb(242, 242, 242);
+  color: #34363e;
 }
 
 .dropdown-content {
@@ -105,7 +112,7 @@ ul {
 
 .dropdown-content a {
   float: none;
-  color: black;
+  color: #34363e;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
@@ -167,8 +174,7 @@ ul {
 }
 
 .side-menu-design {
-  background-color: #611f69;
-  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/sidebar-background.png");
+  background-color: #fdf59c;
   background-size: 1300px 700px;
   background-repeat: repeat;
   cursor: pointer;
@@ -182,10 +188,11 @@ ul {
   display: flex;
   justify-content: space-between;
   padding: 0 25px 25px 25px;
+  color: #34363e;
 }
 
 .side-menu-content {
-  color: #fff;
+  color: #34363e;
   font-size: 24px;
   margin: 25px;
   padding-left: 0;
@@ -201,12 +208,31 @@ ul {
   text-align: center;
 }
 
-.side-menu-download {
+/*SIDE MENU "BUTTON" HIDDEN IN CASE NEED IT'S THE <li> HOME </li>*/
+/* .side-menu-download {
   background-color: #fff;
-  color: #611f69;
-  padding: 15px 0;
-  text-align: center;
+  color: #34363E;
+  padding: 10px 0;
+  text-align: left;
   width: 100%;
+} */
+
+.hidden-side-menu a {
+  color: #34363e;
+  text-decoration: none;
+}
+
+.hidden-side-menu a:hover {
+  color: #3c959e;
+}
+
+.hidden-side-menu li a,
+.hidden-side-menu li a:visited,
+.hidden-side-menu li a:focus {
+  color: #34363e;
+  display: block;
+  padding: 10px;
+  text-decoration: none;
 }
 
 /** =================
@@ -218,7 +244,7 @@ ul {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding: 75px 25px 50px 25px;
+  padding: 150px 25px 50px 25px;
   border: 3px solid lightblue;
 }
 
@@ -307,3 +333,18 @@ ul {
   opacity: 1;
   transform: translateX(0%);
 }
+
+/** ========================================
+*   BOOTSTRAP CSS CHANGES - CAROUSEL SECTION
+*   ========================================
+*/
+
+.carousel-caption {
+  position: relative;
+  left: auto;
+  right: auto;
+  padding-top: 20px;
+  color: black;
+}
+
+/*BOOTSTRAP LIGHTBOX MODAL  */

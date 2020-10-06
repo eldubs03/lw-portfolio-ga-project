@@ -1,11 +1,12 @@
 console.log("JS Loaded!");
 
-const name = "Marc";
+const name = "ElDubs";
 
 console.log(name);
 
 function myFunction() {
   document.getElementById("myDropdown").classList.toggle("show");
+  console.log("myDropdown is active");
 }
 
 // Close the dropdown if the user clicks outside of it
