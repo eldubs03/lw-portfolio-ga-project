@@ -19,7 +19,8 @@
       rel="stylesheet"
     />
   </head>
-  <body>
+
+  <body class="normal-gradient">
     <!--TOP NAV SECTION-->
 
     <header class="header" id="top-nav">
@@ -50,7 +51,7 @@
 
         <div class="dropdown-content" id="myDropdown">
           <ul class="menu-item-list">
-            <li><a href="https://redpointspeaks.com/">Hotel On North</a></li>
+            <li><a href="./the_hot_sardines.html">The Hot Sardines</a></li>
             <li><a href="#">Link 2</a></li>
             <li><a href="#">Link 3</a></li>
             <li></li>
@@ -69,76 +70,69 @@
       </header>
       <ul class="side-menu-content">
         <!--       <li class="side-menu-download">HOME</li> -->
+        <li class="hidden-side-menu">
+          <a href="./the_hot_sardines.html">The Hot Sardines</a>
+        </li>
         <li class="hidden-side-menu"><a href="#">Hotel On North</a></li>
-        <li class="hidden-side-menu"><a href="#">The Hot Sardines</a></li>
         <li class="hidden-side-menu"><a href="#">Item 3</a></li>
         <li class="hidden-side-menu"><a href="#">Item 4</a></li>
         <li class="hidden-side-menu"><a href="#">Item 5</a></li>
         <li class="hidden-side-menu"><a href="#">Item 7</a></li>
         <li class="hidden-side-menu"><a href="#">About</a></li>
-        
+        <li class="hidden-side-menu"><a href="#">Contact</a></li>
       </ul>
     </aside>
 
-    <!-- INDIVIDUAL PROJECT PAGE SECTION  -->
+    <!-- BIO INTRO SECTION  -->
 
     <section class="bio-intro-container">
-        <div class="bio-intro-text">
-          <p>
-            To follow my work, sign up for my blog below. <br />
-            Looking for a designer? Get in touch via eldubsdesigns@gmail.com
-          </p>
-        </div>
-      </section>
-  
-      <section class="about-main-container">
-          <main class="about-main-container-layout">
-            <div class="about-2-items">
-              <img
-                src="./img/about-me-pic.jpg"
-                alt="lauren wilson selfie"
-                class="bio-pic"
-              />
-              
-            </div>
-    
-            <div class="about-2-items">
-              <div>
-                <p class="about-me-text">Lauren Wilson is a graphic and web designer at Redpoint, a New York City based boutique-marketing agency. At Redpoint, we design for digital - web sites, digital campaigns, and e-newsletters and are expanding everyday into print with ads, brochures and trade-show collateral. Through my commercial work in design, I help influence consumer behavior both in broad strokes and drilling down deep into a particular market segment. Along with Redpoint’s account team, I create PR and marketing campaigns that are matched precisely to the "brand voice" required, ensuring success whether the audience reflects indulgent luxury or functional mass market.</p>
-              </div>   
-              <!-- EMAIL SIGN UP FORM -->
-              <div class="email-main-container">
-                <form>
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
-                    <input
-                      type="email"
-                      class="form-control"
-                      id="exampleInputEmail1"
-                      aria-describedby="emailHelp"
-                    />
-                    <small id="emailHelp" class="form-text text-muted"
-                      >We'll never share your email with anyone else.</small>
-                  </div>
-                  <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
-              </div>
-            </div>
-            </div>
-          </main>
-
-          <footer class="about-footer">
-              <hr>
-              <div class="about-copyright">© ElDubs Designs, 2020</div>
-            </footer>
-
-    <!-- SCRIPT -->
+      <div class="bio-intro-text">
+        <p>
+          To follow my work, sign up for my blog below. <br />
+          Looking for a designer? Get in touch via eldubsdesigns@gmail.com
+        </p>
+      </div>
+    </section>
 
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
       crossorigin="anonymous"
     ></script>
+
+
+    <!-- EMAIL SIGN UP FORM -->
+    <section class="portfolio-main-container">
+        <main class="grid-portfolio-layout">
+    <form>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input
+          type="email"
+          class="form-control"
+          id="exampleInputEmail1"
+          aria-describedby="emailHelp"
+        />
+        <small id="emailHelp" class="form-text text-muted"
+          >We'll never share your email with anyone else.</small
+        >
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input
+          type="password"
+          class="form-control"
+          id="exampleInputPassword1"
+        />
+      </div>
+      <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+  <section>
 
     <script
       src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
