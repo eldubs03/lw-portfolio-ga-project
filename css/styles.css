@@ -3,11 +3,6 @@ body {
   /*   border: 2px solid purple; */
   color: #34363e;
 }
-/* .normal-gradient {
-  background-image: linear-gradient(white, lightblue);
-  height: 100%vh;
-  margin: 10px;
-} */
 
 /*  ===============
 *   TOP NAV SECTION
@@ -22,7 +17,7 @@ body {
   height: 40px;
   padding: 15px 15px;
   width: calc(100% - 50px);
-  border: 2px solid greenyellow;
+  /* border: 2px solid greenyellow; */
 }
 
 .nav-left {
@@ -258,12 +253,12 @@ ul {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding: 150px 25px 50px 25px;
-  border: 3px solid lightblue;
+  padding: 150px 50px 50px 50px;
+  /* border: 3px solid lightblue; */
 }
 
 .bio-intro-text {
-  font-size: 64px;
+  font-size: 58px;
   text-align: center;
 }
 
@@ -273,7 +268,7 @@ ul {
 */
 
 .portfolio-main-container {
-  border: solid 3px yellowgreen;
+  /* border: solid 3px yellowgreen; */
   margin: 30px;
 }
 
@@ -301,7 +296,7 @@ ul {
 
 .art-container-2-items {
   position: relative;
-  border: 2px solid black;
+  /* border: 2px solid black; */
 }
 
 .image {
@@ -348,9 +343,9 @@ ul {
   transform: translateX(0%);
 }
 
-/** ========================================
-*   BOOTSTRAP CSS CHANGES - CAROUSEL SECTION
-*   ========================================
+/** ========================================================
+*   BOOTSTRAP CSS CHANGES - CAROUSEL INDIVIDUAL PROJECT PAGE
+*   ========================================================
 */
 
 .carousel-caption {
@@ -362,3 +357,73 @@ ul {
 }
 
 /*BOOTSTRAP LIGHTBOX MODAL  */
+
+/** ===============================
+*   ABOUT ME - RESPONSIVE CONTAINER
+*   ===============================
+*/
+
+.about-main-container {
+  /* border: solid 3px yellowgreen; */
+  margin: 10px;
+}
+
+.about-main-container-layout {
+  padding: 35px 50px 35px 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px 10px;
+  justify-content: center;
+  align-content: center;
+}
+
+@media (max-width: 900px) {
+  .about-main-container-layout {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.about-main-2-items {
+  position: relative;
+  border: 2px solid black;
+}
+
+.about-me-text {
+  font-size: 20px;
+  text-align: left;
+  padding: 20px;
+}
+
+.bio-pic {
+  width: 500px;
+  height: auto;
+  padding-left: 150px;
+}
+
+/** ===============================
+*   ABOUT ME - FORM CONTAINER CSS
+*   ===============================
+*/
+
+.email-main-container {
+  /* border: solid 3px yellowgreen; */
+  margin: 20px;
+}
+/* FOOTER */
+
+.about-footer {
+  align-items: center;
+  background-color: #d4e5e8;
+  color: #2b2d2e;
+  display: flex;
+  flex-direction: column;
+  height: 150px;
+  justify-content: center;
+}
+
+hr {
+  border: 1px solid rgba(52, 54, 62, 0.2);
+  margin-bottom: 40px;
+  width: 95%;
+}
