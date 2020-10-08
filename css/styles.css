@@ -10,12 +10,13 @@ body {
 */
 
 .header {
-  background-color: white;
+  /* background-color: white; */
+  background-color: #f2e2ce;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  height: 65px;
-  padding: 15px 15px;
+  height: 100px;
+  padding: 25px 25px;
   width: 100%;
   /* border: 2px solid greenyellow; */
 }
@@ -465,8 +466,8 @@ ul {
 
 .about-footer {
   align-items: center;
-  background-color: #d4e5e8;
-  color: #2b2d2e;
+  background-color: #bf8275;
+  color: #fff;
   display: flex;
   flex-direction: column;
   height: 150px;
@@ -474,7 +475,7 @@ ul {
 }
 
 hr {
-  border: 1px solid rgba(52, 54, 62, 0.2);
+  border: 1px solid rgba(250, 250, 250, 0.3);
   margin-bottom: 40px;
   width: 95%;
 }
