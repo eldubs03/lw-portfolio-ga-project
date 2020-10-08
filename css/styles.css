@@ -16,7 +16,7 @@ body {
   justify-content: space-between;
   height: 40px;
   padding: 15px 15px;
-  width: calc(100% - 50px);
+  width: 100%;
   /* border: 2px solid greenyellow; */
 }
 
@@ -262,6 +262,25 @@ ul {
   text-align: center;
 }
 
+/** =================
+*   ABOUT ME SECTION
+*   =================
+*/
+
+.about-intro-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 150px 50px 50px 50px;
+  background-color: #bf8275;
+  /* border: 3px solid lightblue; */
+}
+
+.about-intro-text {
+  font-size: 52px;
+  text-align: center;
+}
+
 /** ======================
 *   PORTFOLIO GRID SECTION
 *   ======================
@@ -317,6 +336,10 @@ ul {
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   text-align: center;
+}
+
+.parent a {
+  text-decoration: none;
 }
 
 .art-container-2-items:hover .image {
