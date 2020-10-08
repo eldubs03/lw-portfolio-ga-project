@@ -76,6 +76,15 @@ ul {
   margin-right: 45px;
 }
 
+.nav-right a,
+.nav-right a:visited,
+.nav-right a:focus {
+  color: #454545;
+  display: block;
+  /* padding: 10px; */
+  text-decoration: none;
+}
+
 /*  =============
 *   DROPDOWN MENU
 *   =============
@@ -104,8 +113,8 @@ ul {
 .nav a:hover,
 .dropdown:hover .dropbtn,
 .dropbtn:focus {
-  background-color: rgb(242, 242, 242);
-  color: #34363e;
+  /* background-color: rgb(242, 242, 242); */
+  color: #1264a3;
 }
 
 .dropdown-content {
@@ -138,7 +147,7 @@ ul {
 }
 
 .menu-item-list li a:hover {
-  background-color: rgb(242, 242, 242);
+  /* background-color: rgb(242, 242, 242); */
   color: #1264a3;
 }
 
@@ -263,6 +272,25 @@ ul {
 }
 
 /** =================
+*   VINYL INTRO SECTION
+*   =================
+*/
+
+.vinyl-intro-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 150px 50px 50px 50px;
+  /* background-color: #ffc7e8; */
+  /* border: 3px solid lightblue; */
+}
+
+.vinyl-intro-text {
+  font-size: 52px;
+  text-align: center;
+}
+
+/** =================
 *   ABOUT ME SECTION
 *   =================
 */
@@ -272,12 +300,12 @@ ul {
   flex-direction: row;
   justify-content: center;
   padding: 150px 50px 50px 50px;
-  background-color: #bf8275;
+  background-color: #ffdbf0;
   /* border: 3px solid lightblue; */
 }
 
 .about-intro-text {
-  font-size: 52px;
+  font-size: 40px;
   text-align: center;
 }
 
@@ -375,7 +403,7 @@ ul {
   position: relative;
   left: auto;
   right: auto;
-  /* padding-top: 20px; */
+  padding: 20px 0px 20px 0px;
   color: black;
 }
 
